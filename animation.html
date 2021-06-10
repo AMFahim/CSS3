@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+  <style>
+    .ball{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color:purple ;
+      position: absolute ;
+    }
+    .stage{
+      background-color: cyan;
+      height: 200px;
+      min-width: 800px;
+    }
+    @keyframes sliding {
+      0%{
+        left: 0px;
+        top: 0px;
+        background-color: purple;
+      }
+      25%{
+        left: 300px;
+        top: 100px;
+        background-color: rebeccapurple;
+
+      }
+      75%{
+        left:600px ;
+        top: 0px;
+        background-color:salmon;
+
+      }
+      100%{
+       left: 900px;
+       top: 100px;
+       background-color: red;
+      }
+    }
+    .stage:hover .ball{
+      animation: sliding 5s ease-in-out 1s infinite alternate ;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="ball"></div>
+  </div>
+  
+</body>
+</html>
